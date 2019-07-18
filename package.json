@@ -1,6 +1,6 @@
 {
   "name": "vue-template-extractor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack loader",
   "main": "vue-template-extractor.js",
   "scripts": {
