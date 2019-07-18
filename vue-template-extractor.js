@@ -5,6 +5,7 @@ module.exports = function (source) {
 
     let fileName = '[name].[ext]';
     let ext = 'php';
+    let tabSize = 4;
 
     if (typeof options.fileName !== 'undefined' && options.fileName !== '') {
         fileName = options.fileName;
@@ -12,6 +13,10 @@ module.exports = function (source) {
 
     if (typeof options.ext !== 'undefined' && options.ext !== '') {
         ext = options.ext;
+    }
+
+    if (typeof options.tabSize !== 'undefined' && options.tabSize !== '') {
+        tabSize = options.tabSize;
     }
     
     fileName = fileName.replace('[ext]', ext);
@@ -23,11 +28,12 @@ module.exports = function (source) {
      * Remove template tag
      */
     let html = template[0].replace(/(<template>|<\/template>)/gs, '');
+    let htmlRegex = new RegExp('(^\n|\n$|^\s{' + tabSize + '}|^\t)', 'gm');
 
     /**
      * Remove spaces
      */
-        html = html.replace(/(^\n|\n$|(^\s{4}|^\s{2})|^\t)/gm, '');
+        html = html.replace(htmlRegex, '');
 
     let result = source.replace(template[0], '');
 
