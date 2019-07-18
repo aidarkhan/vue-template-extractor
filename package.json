@@ -1,0 +1,24 @@
+{
+  "name": "vue-template-extractor",
+  "version": "1.0.0",
+  "description": "Webpack loader",
+  "main": "vue-template-extractor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidarkhan/vue-template-extractor.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "vue"
+  ],
+  "author": "Aidarkhan Zhumagulov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidarkhan/vue-template-extractor/issues"
+  },
+  "homepage": "https://github.com/aidarkhan/vue-template-extractor#readme"
+}
